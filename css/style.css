@@ -1,19 +1,190 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Reset e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* aqui define a fonte padão do site */
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #222;
     line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
 }
-/*header*/
+
+/* Header com gradiente e sombra no texto */
 header {
+    background-image: linear-gradient(135deg, #1a09ff, #f88075);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Navegação estilizada */
+nav {
+    background-color: #111;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 15px 10px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: #e50914;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Layout main com sidebar */
+main {
+    display: flex;
+    gap: 25px;
+    padding: 30px 20px;
+}
+
+/* Conteúdo principal */
+main > section {
+    flex: 3;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Ajuste da imagem lateral */
+.sidebar img {
+    width: 100%;        /* ocupa a largura da sidebar */
+    max-width: 180px;   /* limite de tamanho */
+    height: auto;       /* mantém proporção */
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 15px; /* cantos arredondados */
+}
+
+/* Seção inicio */
+.inicio {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Cards de times */
+#times .time {
+    background: linear-gradient(135deg, #ffcccc, #ffe6e6);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#times .time:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Cards de jogos */
+.jogo {
+    background: linear-gradient(135deg, #d6f0ff, #ffffff);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     position: relative;
-    background-color: linear-gradient(135deg, #);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.jogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Overlay leve nos jogos */
+.jogo::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,150,255,0.03);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* Títulos e textos */
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* Footer estilizado */
+footer {
+    background-image: linear-gradient(135deg, #222, #555);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6f61;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Pequenos refinamentos visuais */
+a {
+    transition: all 0.3s ease;
 }
